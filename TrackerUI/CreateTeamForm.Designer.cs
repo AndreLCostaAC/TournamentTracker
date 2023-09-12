@@ -35,15 +35,15 @@
             this.TeamOneScoreLabel = new System.Windows.Forms.Label();
             this.Header = new System.Windows.Forms.Label();
             this.AddNewMemberBox = new System.Windows.Forms.GroupBox();
-            this.FirstNameBox = new System.Windows.Forms.TextBox();
-            this.FirstNameLabel = new System.Windows.Forms.Label();
-            this.LastNameBox = new System.Windows.Forms.TextBox();
-            this.LastNameLabel = new System.Windows.Forms.Label();
-            this.EmailBox = new System.Windows.Forms.TextBox();
-            this.EmailLabel = new System.Windows.Forms.Label();
+            this.CreateMemberButton = new System.Windows.Forms.Button();
             this.PhoneNumberBox = new System.Windows.Forms.TextBox();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
-            this.CreateMemberButton = new System.Windows.Forms.Button();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.EmailLabel = new System.Windows.Forms.Label();
+            this.LastNameBox = new System.Windows.Forms.TextBox();
+            this.LastNameValue = new System.Windows.Forms.Label();
+            this.FirstNameBox = new System.Windows.Forms.TextBox();
+            this.FirstNameValue = new System.Windows.Forms.Label();
             this.TeamMembersListBox = new System.Windows.Forms.ListBox();
             this.DeleteSelectedMember = new System.Windows.Forms.Button();
             this.CreateTeamButton = new System.Windows.Forms.Button();
@@ -120,9 +120,9 @@
             this.AddNewMemberBox.Controls.Add(this.EmailBox);
             this.AddNewMemberBox.Controls.Add(this.EmailLabel);
             this.AddNewMemberBox.Controls.Add(this.LastNameBox);
-            this.AddNewMemberBox.Controls.Add(this.LastNameLabel);
+            this.AddNewMemberBox.Controls.Add(this.LastNameValue);
             this.AddNewMemberBox.Controls.Add(this.FirstNameBox);
-            this.AddNewMemberBox.Controls.Add(this.FirstNameLabel);
+            this.AddNewMemberBox.Controls.Add(this.FirstNameValue);
             this.AddNewMemberBox.Location = new System.Drawing.Point(12, 332);
             this.AddNewMemberBox.Name = "AddNewMemberBox";
             this.AddNewMemberBox.Size = new System.Drawing.Size(348, 277);
@@ -130,62 +130,16 @@
             this.AddNewMemberBox.TabStop = false;
             this.AddNewMemberBox.Text = "Add New Member";
             // 
-            // FirstNameBox
+            // CreateMemberButton
             // 
-            this.FirstNameBox.Location = new System.Drawing.Point(202, 37);
-            this.FirstNameBox.Name = "FirstNameBox";
-            this.FirstNameBox.Size = new System.Drawing.Size(118, 20);
-            this.FirstNameBox.TabIndex = 28;
-            // 
-            // FirstNameLabel
-            // 
-            this.FirstNameLabel.AccessibleName = "FirstNameLabel";
-            this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.FirstNameLabel.Location = new System.Drawing.Point(18, 29);
-            this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(135, 29);
-            this.FirstNameLabel.TabIndex = 27;
-            this.FirstNameLabel.Text = "First Name";
-            // 
-            // LastNameBox
-            // 
-            this.LastNameBox.Location = new System.Drawing.Point(202, 84);
-            this.LastNameBox.Name = "LastNameBox";
-            this.LastNameBox.Size = new System.Drawing.Size(118, 20);
-            this.LastNameBox.TabIndex = 30;
-            // 
-            // LastNameLabel
-            // 
-            this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.LastNameLabel.Location = new System.Drawing.Point(18, 75);
-            this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(132, 29);
-            this.LastNameLabel.TabIndex = 29;
-            this.LastNameLabel.Text = "Last Name";
-            this.LastNameLabel.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // EmailBox
-            // 
-            this.EmailBox.Location = new System.Drawing.Point(202, 131);
-            this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(118, 20);
-            this.EmailBox.TabIndex = 32;
-            // 
-            // EmailLabel
-            // 
-            this.EmailLabel.AccessibleName = "EmailLabel";
-            this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.EmailLabel.Location = new System.Drawing.Point(18, 122);
-            this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(78, 29);
-            this.EmailLabel.TabIndex = 31;
-            this.EmailLabel.Text = "Email";
+            this.CreateMemberButton.AutoSize = true;
+            this.CreateMemberButton.Location = new System.Drawing.Point(89, 227);
+            this.CreateMemberButton.Name = "CreateMemberButton";
+            this.CreateMemberButton.Size = new System.Drawing.Size(134, 26);
+            this.CreateMemberButton.TabIndex = 35;
+            this.CreateMemberButton.Text = "Create Member";
+            this.CreateMemberButton.UseVisualStyleBackColor = true;
+            this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 
             // PhoneNumberBox
             // 
@@ -207,15 +161,61 @@
             this.PhoneNumberLabel.TabIndex = 33;
             this.PhoneNumberLabel.Text = "Phone Number";
             // 
-            // CreateMemberButton
+            // EmailBox
             // 
-            this.CreateMemberButton.AutoSize = true;
-            this.CreateMemberButton.Location = new System.Drawing.Point(89, 227);
-            this.CreateMemberButton.Name = "CreateMemberButton";
-            this.CreateMemberButton.Size = new System.Drawing.Size(134, 26);
-            this.CreateMemberButton.TabIndex = 35;
-            this.CreateMemberButton.Text = "Create Member";
-            this.CreateMemberButton.UseVisualStyleBackColor = true;
+            this.EmailBox.Location = new System.Drawing.Point(202, 131);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(118, 20);
+            this.EmailBox.TabIndex = 32;
+            // 
+            // EmailLabel
+            // 
+            this.EmailLabel.AccessibleName = "EmailLabel";
+            this.EmailLabel.AutoSize = true;
+            this.EmailLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.EmailLabel.Location = new System.Drawing.Point(18, 122);
+            this.EmailLabel.Name = "EmailLabel";
+            this.EmailLabel.Size = new System.Drawing.Size(78, 29);
+            this.EmailLabel.TabIndex = 31;
+            this.EmailLabel.Text = "Email";
+            // 
+            // LastNameBox
+            // 
+            this.LastNameBox.Location = new System.Drawing.Point(202, 84);
+            this.LastNameBox.Name = "LastNameBox";
+            this.LastNameBox.Size = new System.Drawing.Size(118, 20);
+            this.LastNameBox.TabIndex = 30;
+            // 
+            // LastNameLabel
+            // 
+            this.LastNameValue.AutoSize = true;
+            this.LastNameValue.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameValue.ForeColor = System.Drawing.Color.Maroon;
+            this.LastNameValue.Location = new System.Drawing.Point(18, 75);
+            this.LastNameValue.Name = "LastNameLabel";
+            this.LastNameValue.Size = new System.Drawing.Size(132, 29);
+            this.LastNameValue.TabIndex = 29;
+            this.LastNameValue.Text = "Last Name";
+            // 
+            // FirstNameBox
+            // 
+            this.FirstNameBox.Location = new System.Drawing.Point(202, 37);
+            this.FirstNameBox.Name = "FirstNameBox";
+            this.FirstNameBox.Size = new System.Drawing.Size(118, 20);
+            this.FirstNameBox.TabIndex = 28;
+            // 
+            // FirstNameLabel
+            // 
+            this.FirstNameValue.AccessibleName = "FirstNameLabel";
+            this.FirstNameValue.AutoSize = true;
+            this.FirstNameValue.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameValue.ForeColor = System.Drawing.Color.Maroon;
+            this.FirstNameValue.Location = new System.Drawing.Point(18, 29);
+            this.FirstNameValue.Name = "FirstNameLabel";
+            this.FirstNameValue.Size = new System.Drawing.Size(135, 29);
+            this.FirstNameValue.TabIndex = 27;
+            this.FirstNameValue.Text = "First Name";
             // 
             // TeamMembersListBox
             // 
@@ -284,9 +284,9 @@
         private System.Windows.Forms.TextBox EmailBox;
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.TextBox LastNameBox;
-        private System.Windows.Forms.Label LastNameLabel;
+        private System.Windows.Forms.Label LastNameValue;
         private System.Windows.Forms.TextBox FirstNameBox;
-        private System.Windows.Forms.Label FirstNameLabel;
+        private System.Windows.Forms.Label FirstNameValue;
         private System.Windows.Forms.TextBox PhoneNumberBox;
         private System.Windows.Forms.Label PhoneNumberLabel;
         public System.Windows.Forms.Button CreateMemberButton;

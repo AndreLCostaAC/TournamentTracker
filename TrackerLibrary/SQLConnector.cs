@@ -10,6 +10,36 @@ namespace TrackerLibrary
 {
     class SQLConnector : IDataConnection
     {
+        public PersonModel CreatePerson(PersonModel model)
+        {
+            //throw new NotImplementedException();
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Tournaments")))
+            {
+                try
+                {
+                    var p = new DynamicParameters();
+                    p.Add("@FirstName", model.Name);
+                    p.Add("@LastName", model.LastName);
+                    p.Add("@EmailAddress", model.EmailAddress);
+                    p.Add("@PhoneNumber", model.PhoneNumber);
+                    p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    //connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
+
+                    model.Id = p.Get<int>("@Id");
+
+                    return model;
+
+                }
+                // DynamicParamets (uses Dapper)
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
+
         // TODO - Make the CreatePrize method actually save to the database
         /// <summary>
         /// Saves a new prize to the database
@@ -46,7 +76,7 @@ namespace TrackerLibrary
                     p.Add("@PrizeAmount", model.PrizeAmount);
                     p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
-                    connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
+                    connection.Execute("dbo.spPerson_Insert", p, commandType: CommandType.StoredProcedure);
 
                     model.Id = p.Get<int>("@Id");
 

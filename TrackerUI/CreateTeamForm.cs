@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrackerLibrary;
 
 namespace TrackerUI
 {
@@ -22,14 +16,42 @@ namespace TrackerUI
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void TeamMembersListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void TeamMembersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void CreateMemberButton_Click(object sender, EventArgs e)
         {
+            if (ValidateForm())
+            {
+                PersonModel p = new PersonModel();
+                p.Name = FirstNameValue.Text;
+                p.LastName = LastNameValue.Text;
+                p.PhoneNumber = PhoneNumberLabel.Text;
+                p.EmailAddress = EmailLabel.Text;
 
+                //GlobalConfig.Connections.CreatePerson(p);
+            }
+            else { MessageBox.Show("You need to fill in all the fields"); }
+        }
+
+        private bool ValidateForm()
+        {
+            //if (FirstNameValue.Text.Length == 0)
+            //{
+            //    return false;
+            //}
+            //if (LastNameValue.Text.Length == 0)
+            //{
+            //    return false;
+            //}
+            if (!string.IsNullOrEmpty(FirstNameValue.Text)) { return false; }
+            if (!string.IsNullOrEmpty(LastNameValue.Text) ) { return false; }
+            if(EmailLabel.Text.Length == 0){return false;}
+            if(PhoneNumberLabel.Text.Length == 0) {  return false; }
+
+            return true;
         }
     }
 }

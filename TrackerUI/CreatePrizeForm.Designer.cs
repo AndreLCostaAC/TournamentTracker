@@ -47,10 +47,9 @@
             this.Header.AutoSize = true;
             this.Header.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Header.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Header.Location = new System.Drawing.Point(61, 41);
-            this.Header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Header.Location = new System.Drawing.Point(46, 33);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(178, 35);
+            this.Header.Size = new System.Drawing.Size(147, 29);
             this.Header.TabIndex = 18;
             this.Header.Text = "Create Prize";
             // 
@@ -59,23 +58,23 @@
             this.PlaceNumberValue.Location = new System.Drawing.Point(360, 139);
             this.PlaceNumberValue.Margin = new System.Windows.Forms.Padding(4);
             this.PlaceNumberValue.Name = "PlaceNumberValue";
-            this.PlaceNumberValue.Size = new System.Drawing.Size(156, 22);
+            this.PlaceNumberValue.Size = new System.Drawing.Size(156, 20);
             this.PlaceNumberValue.TabIndex = 30;
             // 
             // PlaceNumberLabel
             // 
             this.PlaceNumberLabel.Location = new System.Drawing.Point(0, 0);
+            this.PlaceNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlaceNumberLabel.Name = "PlaceNumberLabel";
-            this.PlaceNumberLabel.Size = new System.Drawing.Size(100, 23);
+            this.PlaceNumberLabel.Size = new System.Drawing.Size(75, 19);
             this.PlaceNumberLabel.TabIndex = 38;
             // 
             // PlaceNameValue
             // 
             this.PlaceNameValue.AccessibleName = "PlaceNameValue";
-            this.PlaceNameValue.Location = new System.Drawing.Point(360, 199);
-            this.PlaceNameValue.Margin = new System.Windows.Forms.Padding(4);
+            this.PlaceNameValue.Location = new System.Drawing.Point(270, 162);
             this.PlaceNameValue.Name = "PlaceNameValue";
-            this.PlaceNameValue.Size = new System.Drawing.Size(156, 22);
+            this.PlaceNameValue.Size = new System.Drawing.Size(118, 20);
             this.PlaceNameValue.TabIndex = 32;
             // 
             // PlaceName
@@ -84,20 +83,17 @@
             this.PlaceName.AutoSize = true;
             this.PlaceName.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlaceName.ForeColor = System.Drawing.Color.Maroon;
-            this.PlaceName.Location = new System.Drawing.Point(61, 188);
-            this.PlaceName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PlaceName.Location = new System.Drawing.Point(46, 153);
             this.PlaceName.Name = "PlaceName";
-            this.PlaceName.Size = new System.Drawing.Size(175, 35);
+            this.PlaceName.Size = new System.Drawing.Size(143, 29);
             this.PlaceName.TabIndex = 31;
             this.PlaceName.Text = "Place Name";
-            this.PlaceName.Click += new System.EventHandler(this.FirstNameLabel_Click);
             // 
             // PrizeAmountValue
             // 
-            this.PrizeAmountValue.Location = new System.Drawing.Point(360, 261);
-            this.PrizeAmountValue.Margin = new System.Windows.Forms.Padding(4);
+            this.PrizeAmountValue.Location = new System.Drawing.Point(270, 212);
             this.PrizeAmountValue.Name = "PrizeAmountValue";
-            this.PrizeAmountValue.Size = new System.Drawing.Size(156, 22);
+            this.PrizeAmountValue.Size = new System.Drawing.Size(118, 20);
             this.PrizeAmountValue.TabIndex = 34;
             // 
             // PrizeAmountLabel
@@ -106,19 +102,17 @@
             this.PrizeAmountLabel.AutoSize = true;
             this.PrizeAmountLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrizeAmountLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.PrizeAmountLabel.Location = new System.Drawing.Point(61, 249);
-            this.PrizeAmountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrizeAmountLabel.Location = new System.Drawing.Point(46, 202);
             this.PrizeAmountLabel.Name = "PrizeAmountLabel";
-            this.PrizeAmountLabel.Size = new System.Drawing.Size(201, 35);
+            this.PrizeAmountLabel.Size = new System.Drawing.Size(166, 29);
             this.PrizeAmountLabel.TabIndex = 33;
             this.PrizeAmountLabel.Text = "Prize Amount";
             // 
             // PrizePercentageValue
             // 
-            this.PrizePercentageValue.Location = new System.Drawing.Point(360, 354);
-            this.PrizePercentageValue.Margin = new System.Windows.Forms.Padding(4);
+            this.PrizePercentageValue.Location = new System.Drawing.Point(270, 288);
             this.PrizePercentageValue.Name = "PrizePercentageValue";
-            this.PrizePercentageValue.Size = new System.Drawing.Size(156, 22);
+            this.PrizePercentageValue.Size = new System.Drawing.Size(118, 20);
             this.PrizePercentageValue.TabIndex = 36;
             // 
             // PrizePercentageLabel
@@ -127,20 +121,18 @@
             this.PrizePercentageLabel.AutoSize = true;
             this.PrizePercentageLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrizePercentageLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.PrizePercentageLabel.Location = new System.Drawing.Point(61, 345);
-            this.PrizePercentageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrizePercentageLabel.Location = new System.Drawing.Point(46, 280);
             this.PrizePercentageLabel.Name = "PrizePercentageLabel";
-            this.PrizePercentageLabel.Size = new System.Drawing.Size(238, 35);
+            this.PrizePercentageLabel.Size = new System.Drawing.Size(196, 29);
             this.PrizePercentageLabel.TabIndex = 35;
             this.PrizePercentageLabel.Text = "Prize Percentage";
             // 
             // CreatePrizeButton
             // 
             this.CreatePrizeButton.AccessibleName = "CreatePrizeButton";
-            this.CreatePrizeButton.Location = new System.Drawing.Point(188, 434);
-            this.CreatePrizeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CreatePrizeButton.Location = new System.Drawing.Point(141, 353);
             this.CreatePrizeButton.Name = "CreatePrizeButton";
-            this.CreatePrizeButton.Size = new System.Drawing.Size(227, 50);
+            this.CreatePrizeButton.Size = new System.Drawing.Size(170, 41);
             this.CreatePrizeButton.TabIndex = 37;
             this.CreatePrizeButton.Text = "Create Prize";
             this.CreatePrizeButton.UseVisualStyleBackColor = true;
@@ -149,10 +141,9 @@
             // PlaceNumber
             // 
             this.PlaceNumber.AccessibleName = "PlaceNumber";
-            this.PlaceNumber.Location = new System.Drawing.Point(363, 142);
-            this.PlaceNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.PlaceNumber.Location = new System.Drawing.Point(272, 115);
             this.PlaceNumber.Name = "PlaceNumber";
-            this.PlaceNumber.Size = new System.Drawing.Size(156, 22);
+            this.PlaceNumber.Size = new System.Drawing.Size(118, 20);
             this.PlaceNumber.TabIndex = 40;
             this.PlaceNumber.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -162,19 +153,17 @@
             this.Place.AutoSize = true;
             this.Place.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Place.ForeColor = System.Drawing.Color.Maroon;
-            this.Place.Location = new System.Drawing.Point(64, 131);
-            this.Place.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Place.Location = new System.Drawing.Point(48, 106);
             this.Place.Name = "Place";
-            this.Place.Size = new System.Drawing.Size(205, 35);
+            this.Place.Size = new System.Drawing.Size(168, 29);
             this.Place.TabIndex = 39;
             this.Place.Text = "Place Number";
-            this.Place.Click += new System.EventHandler(this.label1_Click);
             // 
             // CreatePrizeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PlaceNumber);
             this.Controls.Add(this.Place);
             this.Controls.Add(this.CreatePrizeButton);
@@ -187,9 +176,9 @@
             this.Controls.Add(this.PlaceName);
             this.Controls.Add(this.Header);
             this.Cursor = System.Windows.Forms.Cursors.No;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreatePrizeForm";
             this.Text = "Create Prize";
+            //this.Load += new System.EventHandler(this.CreatePrizeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
