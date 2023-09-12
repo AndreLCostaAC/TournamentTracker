@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Dapper;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +19,50 @@ namespace TrackerLibrary
         public PrizeModel CreatePrize(PrizeModel model)
         {
             //throw new NotImplementedException();
-            model.Id = 1;
-            return model;
+            //model.Id = 1;
+            //return model;
+            // I want to create a new IdbConnection 
+            // IdbConnection is something that microsoft has and in this case we gonna fill the connection with a stystem.data connection.
+            // using -> I wanna wrap the entire line between the () and after using it I want to destroy that properly . PREVENTS MEMORY LEAKS.
+
+
+
+            //@PlaceNumber		    int,
+            //@PlaceName            nvarchar(50),
+            //@PrizeAmount          money,
+            //@PrizePercentage      \float,
+            //@Id                   int = 0 output
+
+
+
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Tournaments")))
+            {
+                try
+                {
+                    var p = new DynamicParameters();
+                    p.Add("@PlaceNumber", model.PlaceNumber);
+                    p.Add("@PlaceName", model.PlaceName);
+                    p.Add("@PrizePercentage", model.PrizePercentage);
+                    p.Add("@PrizeAmount", model.PrizeAmount);
+                    p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+
+                    connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
+
+                    model.Id = p.Get<int>("@Id");
+
+                    return model;
+
+                }
+                // DynamicParamets (uses Dapper)
+                catch (Exception)
+                {
+                    throw;
+                }
+
+
+            }
+
+
         }
     }
 }

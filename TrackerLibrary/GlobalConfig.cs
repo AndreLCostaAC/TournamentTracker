@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,13 @@ namespace TrackerLibrary
                 TextConnector text = new TextConnector();
                 Connections.Add(text);
             }
+        }
+
+        public static string ConnectionString(string connectionString)
+        {
+            // we pass the name of the as string and we get back the name of the server.
+            return ConfigurationManager.ConnectionStrings[connectionString].ConnectionString;
+
         }
 
     }
