@@ -19,7 +19,7 @@ namespace TrackerUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Initialize the database connection
-            TrackerLibrary.GlobalConfig.InitializeConnections(true, false);
+            TrackerLibrary.GlobalConfig.InitializeConnections(DatabaseType.Sql);
 
             //Application.Run(new TournamentDashboardForm());
             Application.Run(new CreateTeamForm());

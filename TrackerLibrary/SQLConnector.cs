@@ -10,11 +10,12 @@ namespace TrackerLibrary
 {
     class SQLConnector : IDataConnection
     {
+        private const string db = "Tournaments";
         public PersonModel CreatePerson(PersonModel model)
         {
             //throw new NotImplementedException();
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString(db)))
             {
                 try
                 {
@@ -65,7 +66,7 @@ namespace TrackerLibrary
 
 
 
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString("Tournaments")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString(db)))
             {
                 try
                 {
@@ -93,6 +94,17 @@ namespace TrackerLibrary
             }
 
 
+        }
+
+        public List<PersonModel> GetPerson_ALL()
+        {
+            List<PersonModel> output;
+            using(IDbConnection connection = new System.Data.SqlClient.SqlConnection(GlobalConfig.ConnectionString(db)))
+            {
+                output = connection.Query<PersonModel>("dbo.spPerson_GetAll").ToList();
+
+            }
+            return output;
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TrackerLibrary
             }
 
             model.Id = currentId;
-
+            
             currentId += 1;
 
             // Add the new record with the new ID(max + 1)
@@ -75,6 +75,11 @@ namespace TrackerLibrary
 
 
 
+        }
+
+        public List<PersonModel> GetPerson_ALL()
+        {
+            throw new NotImplementedException();
         }
     }
 }

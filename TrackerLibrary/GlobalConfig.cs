@@ -7,26 +7,30 @@ using System.Threading.Tasks;
 
 namespace TrackerLibrary
 {
-     public class GlobalConfig
+     public static class GlobalConfig
     {
-        public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        //public static List<IDataConnection> Connections { get; private set; } = new List<IDataConnection>();
+        public static IDataConnection Connections { get; private set; }
 
-        public static void InitializeConnections(bool database, bool textFiles)
+        public static void InitializeConnections(DatabaseType db)
         {
-            if (database)
+            
+            if (db == DatabaseType.Sql)
             {
                 // TODO - Set up the SQL Connector properly
                 SQLConnector sql = new SQLConnector();
-                Connections.Add(sql);
+                //Connections.Add(sql);
+                Connections = sql;
                 
                 // TODO - Create the SQL connection
             }
-            if (textFiles)
+            else if (db == DatabaseType.TextFile)
             {
 
                 // TODO - Create the text connection
                 TextConnector text = new TextConnector();
-                Connections.Add(text);
+                //Connections.Add(text);
+                Connections = text;
             }
         }
 

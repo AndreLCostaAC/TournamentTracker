@@ -53,9 +53,10 @@
             // AddMemberLabel
             // 
             this.AddMemberLabel.AutoSize = true;
-            this.AddMemberLabel.Location = new System.Drawing.Point(71, 271);
+            this.AddMemberLabel.Location = new System.Drawing.Point(95, 334);
+            this.AddMemberLabel.Margin = new System.Windows.Forms.Padding(4);
             this.AddMemberLabel.Name = "AddMemberLabel";
-            this.AddMemberLabel.Size = new System.Drawing.Size(170, 41);
+            this.AddMemberLabel.Size = new System.Drawing.Size(227, 50);
             this.AddMemberLabel.TabIndex = 25;
             this.AddMemberLabel.Text = "Add Member";
             this.AddMemberLabel.UseVisualStyleBackColor = true;
@@ -63,9 +64,10 @@
             // SelectTeamLabel
             // 
             this.SelectTeamLabel.FormattingEnabled = true;
-            this.SelectTeamLabel.Location = new System.Drawing.Point(46, 230);
+            this.SelectTeamLabel.Location = new System.Drawing.Point(61, 283);
+            this.SelectTeamLabel.Margin = new System.Windows.Forms.Padding(4);
             this.SelectTeamLabel.Name = "SelectTeamLabel";
-            this.SelectTeamLabel.Size = new System.Drawing.Size(259, 21);
+            this.SelectTeamLabel.Size = new System.Drawing.Size(344, 24);
             this.SelectTeamLabel.TabIndex = 23;
             // 
             // RoundLabel
@@ -73,19 +75,20 @@
             this.RoundLabel.AutoSize = true;
             this.RoundLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoundLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.RoundLabel.Location = new System.Drawing.Point(41, 186);
+            this.RoundLabel.Location = new System.Drawing.Point(55, 229);
+            this.RoundLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RoundLabel.Name = "RoundLabel";
-            this.RoundLabel.Size = new System.Drawing.Size(246, 29);
+            this.RoundLabel.Size = new System.Drawing.Size(301, 35);
             this.RoundLabel.TabIndex = 22;
             this.RoundLabel.Text = "Select Team Member";
             // 
             // TournamentNameValue
             // 
-            this.TournamentNameValue.Location = new System.Drawing.Point(46, 140);
+            this.TournamentNameValue.Location = new System.Drawing.Point(61, 173);
+            this.TournamentNameValue.Margin = new System.Windows.Forms.Padding(4);
             this.TournamentNameValue.Name = "TournamentNameValue";
-            this.TournamentNameValue.Size = new System.Drawing.Size(259, 20);
+            this.TournamentNameValue.Size = new System.Drawing.Size(344, 22);
             this.TournamentNameValue.TabIndex = 19;
-            this.TournamentNameValue.TextChanged += new System.EventHandler(this.TournamentNameValue_TextChanged);
             // 
             // TeamOneScoreLabel
             // 
@@ -93,10 +96,11 @@
             this.TeamOneScoreLabel.AutoSize = true;
             this.TeamOneScoreLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TeamOneScoreLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.TeamOneScoreLabel.Location = new System.Drawing.Point(41, 93);
+            this.TeamOneScoreLabel.Location = new System.Drawing.Point(55, 114);
+            this.TeamOneScoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TeamOneScoreLabel.Name = "TeamOneScoreLabel";
             this.TeamOneScoreLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TeamOneScoreLabel.Size = new System.Drawing.Size(145, 29);
+            this.TeamOneScoreLabel.Size = new System.Drawing.Size(179, 35);
             this.TeamOneScoreLabel.TabIndex = 18;
             this.TeamOneScoreLabel.Text = "Team Name";
             this.TeamOneScoreLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -106,9 +110,10 @@
             this.Header.AutoSize = true;
             this.Header.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Header.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Header.Location = new System.Drawing.Point(41, 25);
+            this.Header.Location = new System.Drawing.Point(55, 31);
+            this.Header.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(152, 29);
+            this.Header.Size = new System.Drawing.Size(186, 35);
             this.Header.TabIndex = 17;
             this.Header.Text = "Create Team";
             // 
@@ -123,9 +128,11 @@
             this.AddNewMemberBox.Controls.Add(this.LastNameLabel);
             this.AddNewMemberBox.Controls.Add(this.FirstNameValue);
             this.AddNewMemberBox.Controls.Add(this.FirstNameLabel);
-            this.AddNewMemberBox.Location = new System.Drawing.Point(12, 332);
+            this.AddNewMemberBox.Location = new System.Drawing.Point(16, 409);
+            this.AddNewMemberBox.Margin = new System.Windows.Forms.Padding(4);
             this.AddNewMemberBox.Name = "AddNewMemberBox";
-            this.AddNewMemberBox.Size = new System.Drawing.Size(348, 277);
+            this.AddNewMemberBox.Padding = new System.Windows.Forms.Padding(4);
+            this.AddNewMemberBox.Size = new System.Drawing.Size(464, 341);
             this.AddNewMemberBox.TabIndex = 26;
             this.AddNewMemberBox.TabStop = false;
             this.AddNewMemberBox.Text = "Add New Member";
@@ -133,22 +140,23 @@
             // CreateMemberButton
             // 
             this.CreateMemberButton.AutoSize = true;
-            this.CreateMemberButton.Location = new System.Drawing.Point(89, 227);
+            this.CreateMemberButton.Location = new System.Drawing.Point(119, 279);
+            this.CreateMemberButton.Margin = new System.Windows.Forms.Padding(4);
             this.CreateMemberButton.Name = "CreateMemberButton";
-            this.CreateMemberButton.Size = new System.Drawing.Size(134, 26);
+            this.CreateMemberButton.Size = new System.Drawing.Size(179, 32);
             this.CreateMemberButton.TabIndex = 35;
             this.CreateMemberButton.Text = "Create Member";
             this.CreateMemberButton.UseVisualStyleBackColor = true;
             this.CreateMemberButton.Click += new System.EventHandler(this.CreateMemberButton_Click);
             // 
-            // PhoneNumberBox
+            // PhoneNumberValue
             // 
             this.PhoneNumberValue.AccessibleName = "PhoneNumberLabel";
-            this.PhoneNumberValue.Location = new System.Drawing.Point(202, 178);
-            this.PhoneNumberValue.Name = "PhoneNumberBox";
-            this.PhoneNumberValue.Size = new System.Drawing.Size(118, 20);
+            this.PhoneNumberValue.Location = new System.Drawing.Point(269, 219);
+            this.PhoneNumberValue.Margin = new System.Windows.Forms.Padding(4);
+            this.PhoneNumberValue.Name = "PhoneNumberValue";
+            this.PhoneNumberValue.Size = new System.Drawing.Size(156, 22);
             this.PhoneNumberValue.TabIndex = 34;
-
             // 
             // PhoneNumberLabel
             // 
@@ -156,18 +164,19 @@
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(18, 170);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(24, 209);
+            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(178, 29);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(217, 35);
             this.PhoneNumberLabel.TabIndex = 33;
             this.PhoneNumberLabel.Text = "Phone Number";
-
             // 
-            // EmailBox
+            // EmailValue
             // 
-            this.EmailValue.Location = new System.Drawing.Point(202, 131);
+            this.EmailValue.Location = new System.Drawing.Point(269, 161);
+            this.EmailValue.Margin = new System.Windows.Forms.Padding(4);
             this.EmailValue.Name = "EmailValue";
-            this.EmailValue.Size = new System.Drawing.Size(118, 20);
+            this.EmailValue.Size = new System.Drawing.Size(156, 22);
             this.EmailValue.TabIndex = 32;
             // 
             // EmailLabel
@@ -176,17 +185,19 @@
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.EmailLabel.Location = new System.Drawing.Point(18, 122);
+            this.EmailLabel.Location = new System.Drawing.Point(24, 150);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(78, 29);
+            this.EmailLabel.Size = new System.Drawing.Size(94, 35);
             this.EmailLabel.TabIndex = 31;
             this.EmailLabel.Text = "Email";
             // 
-            // LastNameBox
+            // LastNameValue
             // 
-            this.LastNameValue.Location = new System.Drawing.Point(202, 84);
+            this.LastNameValue.Location = new System.Drawing.Point(269, 103);
+            this.LastNameValue.Margin = new System.Windows.Forms.Padding(4);
             this.LastNameValue.Name = "LastNameValue";
-            this.LastNameValue.Size = new System.Drawing.Size(118, 20);
+            this.LastNameValue.Size = new System.Drawing.Size(156, 22);
             this.LastNameValue.TabIndex = 30;
             // 
             // LastNameLabel
@@ -194,19 +205,20 @@
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.LastNameLabel.Location = new System.Drawing.Point(18, 75);
+            this.LastNameLabel.Location = new System.Drawing.Point(24, 92);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(132, 29);
+            this.LastNameLabel.Size = new System.Drawing.Size(160, 35);
             this.LastNameLabel.TabIndex = 29;
             this.LastNameLabel.Text = "Last Name";
             // 
-            // FirstNameBox
+            // FirstNameValue
             // 
-            this.FirstNameValue.Location = new System.Drawing.Point(202, 37);
+            this.FirstNameValue.Location = new System.Drawing.Point(269, 46);
+            this.FirstNameValue.Margin = new System.Windows.Forms.Padding(4);
             this.FirstNameValue.Name = "FirstNameValue";
-            this.FirstNameValue.Size = new System.Drawing.Size(118, 20);
+            this.FirstNameValue.Size = new System.Drawing.Size(156, 22);
             this.FirstNameValue.TabIndex = 28;
-
             // 
             // FirstNameLabel
             // 
@@ -214,29 +226,33 @@
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Mongolian Baiti", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.FirstNameLabel.Location = new System.Drawing.Point(18, 29);
+            this.FirstNameLabel.Location = new System.Drawing.Point(24, 36);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(135, 29);
+            this.FirstNameLabel.Size = new System.Drawing.Size(163, 35);
             this.FirstNameLabel.TabIndex = 27;
             this.FirstNameLabel.Text = "First Name";
-                
             // 
             // TeamMembersListBox
             // 
             this.TeamMembersListBox.AccessibleName = "TournamentPlayersListBox";
             this.TeamMembersListBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.TeamMembersListBox.FormattingEnabled = true;
-            this.TeamMembersListBox.Location = new System.Drawing.Point(417, 51);
-            this.TeamMembersListBox.Name = "TeamMembersListValue";
-            this.TeamMembersListBox.Size = new System.Drawing.Size(398, 368);
+            this.TeamMembersListBox.ItemHeight = 16;
+            this.TeamMembersListBox.Location = new System.Drawing.Point(556, 63);
+            this.TeamMembersListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.TeamMembersListBox.Name = "TeamMembersListBox";
+            this.TeamMembersListBox.Size = new System.Drawing.Size(529, 452);
             this.TeamMembersListBox.TabIndex = 27;
+            this.TeamMembersListBox.SelectedIndexChanged += new System.EventHandler(this.TeamMembersListBox_SelectedIndexChanged);
             // 
             // DeleteSelectedMember
             // 
             this.DeleteSelectedMember.AutoSize = true;
-            this.DeleteSelectedMember.Location = new System.Drawing.Point(531, 451);
+            this.DeleteSelectedMember.Location = new System.Drawing.Point(708, 555);
+            this.DeleteSelectedMember.Margin = new System.Windows.Forms.Padding(4);
             this.DeleteSelectedMember.Name = "DeleteSelectedMember";
-            this.DeleteSelectedMember.Size = new System.Drawing.Size(170, 41);
+            this.DeleteSelectedMember.Size = new System.Drawing.Size(227, 50);
             this.DeleteSelectedMember.TabIndex = 28;
             this.DeleteSelectedMember.Text = "Delete Selected Member";
             this.DeleteSelectedMember.UseVisualStyleBackColor = true;
@@ -244,17 +260,18 @@
             // CreateTeamButton
             // 
             this.CreateTeamButton.AutoSize = true;
-            this.CreateTeamButton.Location = new System.Drawing.Point(479, 524);
+            this.CreateTeamButton.Location = new System.Drawing.Point(639, 645);
+            this.CreateTeamButton.Margin = new System.Windows.Forms.Padding(4);
             this.CreateTeamButton.Name = "CreateTeamButton";
-            this.CreateTeamButton.Size = new System.Drawing.Size(288, 75);
+            this.CreateTeamButton.Size = new System.Drawing.Size(384, 92);
             this.CreateTeamButton.TabIndex = 29;
             this.CreateTeamButton.UseVisualStyleBackColor = true;
             // 
             // CreateTeamForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1163, 641);
+            this.ClientSize = new System.Drawing.Size(1551, 789);
             this.Controls.Add(this.CreateTeamButton);
             this.Controls.Add(this.DeleteSelectedMember);
             this.Controls.Add(this.TeamMembersListBox);
@@ -265,6 +282,7 @@
             this.Controls.Add(this.TournamentNameValue);
             this.Controls.Add(this.TeamOneScoreLabel);
             this.Controls.Add(this.Header);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateTeamForm";
             this.Text = "Create Team";
             this.AddNewMemberBox.ResumeLayout(false);
