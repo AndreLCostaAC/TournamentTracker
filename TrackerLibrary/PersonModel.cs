@@ -14,5 +14,17 @@ namespace TrackerLibrary
 
         public string PhoneNumber { get; set; }
         public int Id { get; internal set; }
+
+        public PersonModel() { }
+
+        public PersonModel(string name, string lastName, string emailAddress, string phoneNumber)
+        {
+            Name = name;
+            LastName = lastName;
+            EmailAddress = emailAddress;
+            PhoneNumber = phoneNumber;
+
+        }
     }
+
 }

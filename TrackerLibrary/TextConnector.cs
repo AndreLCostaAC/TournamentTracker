@@ -12,9 +12,34 @@ namespace TrackerLibrary
 
         private const string PrizesFile = "PrizeModels.csv";
 
+        private const string PersonsFile = "PersonsFile.csv";
+
         public PersonModel CreatePerson(PersonModel model)
         {
-            throw new NotImplementedException();
+            List<PersonModel> person = PersonsFile.FullFilePath().LoadFile().convertToPersonModel();
+
+
+            // Find the max ID
+            int currentId = 1;
+
+            if (person != null && person.Count > 0)
+            {
+                currentId = person.OrderByDescending(x => x.Id).First().Id + 1;
+            }
+
+            model.Id = currentId;
+
+            currentId += 1;
+
+            // Add the new record with the new ID(max + 1)
+            person.Add(model);
+
+
+            // Convert the prizes to list <String>
+            // Save the list <string> to the text file
+            person.SaveToPersonFile(PersonsFile);
+
+            return model;
         }
 
 

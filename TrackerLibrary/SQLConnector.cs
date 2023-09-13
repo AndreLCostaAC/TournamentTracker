@@ -25,7 +25,7 @@ namespace TrackerLibrary
                     p.Add("@PhoneNumber", model.PhoneNumber);
                     p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
-                    //connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
+                    connection.Execute("dbo.spPerson_Insert", p, commandType: CommandType.StoredProcedure);
 
                     model.Id = p.Get<int>("@Id");
 
@@ -76,7 +76,7 @@ namespace TrackerLibrary
                     p.Add("@PrizeAmount", model.PrizeAmount);
                     p.Add("@Id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
 
-                    connection.Execute("dbo.spPerson_Insert", p, commandType: CommandType.StoredProcedure);
+                    connection.Execute("dbo.spPrizes_Insert", p, commandType: CommandType.StoredProcedure);
 
                     model.Id = p.Get<int>("@Id");
 

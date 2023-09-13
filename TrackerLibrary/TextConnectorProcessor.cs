@@ -23,7 +23,40 @@ namespace TrackerLibrary.TextHelpers
                 return new List<string>();
             }
             return File.ReadAllLines(file).ToList();
-        }   
+        }
+
+        public static List<PersonModel> convertToPersonModel(this List<string> lines)
+        {
+            List<PersonModel> output = new List<PersonModel>();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+                PersonModel p = new PersonModel();
+                p.Id = int.Parse(cols[0]);
+                p.Name = cols[1];
+                p.LastName = cols[2];
+                p.EmailAddress = cols[3];
+                p.PhoneNumber = cols[4];
+                output.Add(p);
+
+            }
+
+            return output;
+
+        }
+
+        public static void SaveToPersonFile(this List<PersonModel> models, string fileName)
+        {
+            List<string> lines = new List<string>();
+            foreach (PersonModel p in models)
+            {
+                lines.Add($"{p.Id}, {p.Name}, {p.LastName}, {p.EmailAddress}, {p.PhoneNumber}");
+
+            }
+            // write all lines in the file (with the file path)
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
 
         public static List<PrizeModel> convertToPrizeModel(this List<string> lines) 
         {

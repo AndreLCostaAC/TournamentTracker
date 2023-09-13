@@ -18,13 +18,6 @@ namespace TrackerUI
             InitializeComponent();
         }
 
-
-
-        private void TeamOneScoreValue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CreatePrizeButton_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -94,20 +87,11 @@ namespace TrackerUI
             return output;
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PrizeAmountValue_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+    }
 
         //private void CreatePrizeForm_Load(object sender, EventArgs e)
         //{
 
         //}
-    }
 }
+
