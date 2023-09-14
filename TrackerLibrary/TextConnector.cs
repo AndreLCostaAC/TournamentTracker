@@ -79,7 +79,7 @@ namespace TrackerLibrary
 
         public List<PersonModel> GetPerson_ALL()
         {
-            throw new NotImplementedException();
+            return PersonsFile.FullFilePath().LoadFile().convertToPersonModel();
         }
     }
 }

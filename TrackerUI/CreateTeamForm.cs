@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using TrackerLibrary;
@@ -31,8 +32,14 @@ namespace TrackerUI
         }
         private void WireUpLists()
         {
+            //Forces the refresh in the dropdown
+            SelectTeamLabel.DataSource = null;
+
             SelectTeamLabel.DataSource = availableTeamMembers;
             SelectTeamLabel.DisplayMember = "FullName";
+
+            //Forces the refresh in the ListBox
+            TeamMembersListBox.DataSource = null;
 
             TeamMembersListBox.DataSource = selectedTeamMembers;
             TeamMembersListBox.DisplayMember = "FullName";
@@ -50,6 +57,8 @@ namespace TrackerUI
 
                 GlobalConfig.Connections.CreatePerson(p);
 
+                selectedTeamMembers.Add(p);
+                WireUpLists();
 
                 //foreach (IDataConnection db in GlobalConfig.Connections)
                 //{
@@ -81,9 +90,49 @@ namespace TrackerUI
             return true;
         }
 
-        private void TeamMembersListBox_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void AddMemberLabel_Click(object sender, EventArgs e)
+        {
+
+            PersonModel p = SelectTeamLabel.SelectedItem as PersonModel;
+
+            if(p != null)
+            {
+                selectedTeamMembers.Add(p);
+                availableTeamMembers.Remove(p);
+                WireUpLists();
+            }
+            else
+            {
+                MessageBox.Show("Nenhum membro selecionado");
+            }
+
+
+
+        }
+
+        private void DeleteSelectedMember_Click(object sender, EventArgs e)
+        {
+
+            PersonModel p = TeamMembersListBox.SelectedItem as PersonModel;
+            if (p != null)
+            {
+                selectedTeamMembers.Remove(p);
+                availableTeamMembers.Add(p);
+
+                WireUpLists();
+            }
+
+            else
+            {
+                MessageBox.Show("Nenhum membro selecionado");
+            }
+
+        }
+
+        private void CreateTeamButton_Click(object sender, EventArgs e)
         {
 
         }
     }
-}
+} 

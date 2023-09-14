@@ -60,6 +60,7 @@
             this.AddMemberLabel.TabIndex = 25;
             this.AddMemberLabel.Text = "Add Member";
             this.AddMemberLabel.UseVisualStyleBackColor = true;
+            this.AddMemberLabel.Click += new System.EventHandler(this.AddMemberLabel_Click);
             // 
             // SelectTeamLabel
             // 
@@ -244,7 +245,6 @@
             this.TeamMembersListBox.Name = "TeamMembersListBox";
             this.TeamMembersListBox.Size = new System.Drawing.Size(529, 452);
             this.TeamMembersListBox.TabIndex = 27;
-            this.TeamMembersListBox.SelectedIndexChanged += new System.EventHandler(this.TeamMembersListBox_SelectedIndexChanged);
             // 
             // DeleteSelectedMember
             // 
@@ -256,16 +256,20 @@
             this.DeleteSelectedMember.TabIndex = 28;
             this.DeleteSelectedMember.Text = "Delete Selected Member";
             this.DeleteSelectedMember.UseVisualStyleBackColor = true;
+            this.DeleteSelectedMember.Click += new System.EventHandler(this.DeleteSelectedMember_Click);
             // 
             // CreateTeamButton
             // 
+            this.CreateTeamButton.AccessibleName = "Create Team";
             this.CreateTeamButton.AutoSize = true;
             this.CreateTeamButton.Location = new System.Drawing.Point(639, 645);
             this.CreateTeamButton.Margin = new System.Windows.Forms.Padding(4);
             this.CreateTeamButton.Name = "CreateTeamButton";
             this.CreateTeamButton.Size = new System.Drawing.Size(384, 92);
             this.CreateTeamButton.TabIndex = 29;
+            this.CreateTeamButton.Text = "Create Team";
             this.CreateTeamButton.UseVisualStyleBackColor = true;
+            this.CreateTeamButton.Click += new System.EventHandler(this.CreateTeamButton_Click);
             // 
             // CreateTeamForm
             // 
